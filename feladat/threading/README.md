@@ -8,7 +8,7 @@ An intereseting modification is to emulate the splitting effect (or if you will 
 All test have been run on arrays whose size range between 100 and 1000000.
 
 The comparison of these 3 alterations can be found in the measurement.xlsl file, which is the same as the following:
-![Image description](comparision.png)
+![Image description](comparison.png)
 
 We limit the number of threads in the parallelized version by specifying the minimum length of the subarray below which no further threads are created, thus preventing the explosion of runtime by thread management overhead. This is easy to imagine as selecting nodes up to the level of the binary tree where each node's (subarray) length is below a certain threshold whose value is predetermined. It is quite trivial to see that selecting the entire tree, or the leaves so to speak will result in a gigantic loss of performance, because the number of threads will increase by 2 every split following the $2^n$ pattern.
 
