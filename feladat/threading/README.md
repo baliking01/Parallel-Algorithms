@@ -5,7 +5,7 @@ In the Quicksort_cpp folder we compare 3 different versions of the quicksort alg
 A slight alteration of the original quicksort is to spawn a thread whenever we find a pivot element and split the original array into 2 subarrays and perform quicksort on them distibuted between these newly created threads, thus parallelizing the algorithm.
 An intereseting modification is to emulate the splitting effect (or if you will the binary tree) and use a stack instead. This method uses iteration unlike the original quicksort, which uses recursion to sort the array. The speedup of this version of the algorithm is negligable as it is nigh identical to the recursive one runtime wise, even at large array sizes.
 
-All test have been run on arrays whose size range between 100 and 100000.
+All test have been run on arrays whose size range between 100 and 1000000.
 
 The comparison of these 3 alterations can be found in the measurement.xlsl file, which is the same as the following:
 ![Image description](comparision.png)
